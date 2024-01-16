@@ -16,6 +16,12 @@ int main(int argc, char const *argv[])
     for(int i=0; i<stringLenght; i++){
         printf("%d ", name[i]);
     }
-    printf(")");
+    printf(")\n");
+
+    for(int i=0; i<10; i++)
+    {
+        printf("%c", name[i]);
+    }
+    printf("Bye!");
     return 0;
 }
