@@ -1,5 +1,4 @@
 #include <iostream>
-
 struct Book {
 private:
   int bookID;
