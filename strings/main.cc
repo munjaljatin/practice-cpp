@@ -3,7 +3,7 @@
 
 int main(int argc, char const *argv[]) {
   /* code */
-  // c style string
+  // c style stringcd cc
   char name[10] = {'J', 'A', 'T', 'I', 'N'};
   for (int i = 0; name[i] != '\0'; i++) {
     printf("%c ", name[i]);
