@@ -2,6 +2,9 @@
 
 using namespace std;
 
+int calculateSquare(int);
+inline int calculateCube(int);
+
 namespace Jatin {
 char Name[20] = "Jatin Munjal";
 int age = 23;
@@ -20,5 +23,16 @@ int main(int argc, char const *argv[]) {
   cout << Name;
   cout << age;
 
+  int z = calculateSquare(10);
+  cout << z;
+  int r = calculateCube(x);
+  cout << r;
   return 0;
 }
+
+int calculateSquare(int num) {
+  int square = num * num;
+  return square;
+}
+
+int calculateCube(int num) { return (num * num * num); }
