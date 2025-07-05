@@ -32,5 +32,17 @@ int main(int argc, char const *argv[]) {
   b2 = {1002, "Can't Hurt Me", 375, "David Goggins", "Publisher"};
   cout << b2.bookAuthor << endl;
   cout << b2.bookTitle;
+
+  Book b3;
+  b3.bookID = 1010;
+  strcpy(b3.bookTitle, "The Almanack of Naval Ravikant");
+  b3.bookPrice = 350.65;
+  strcpy(b3.bookPublisher, "Publisher");
+  strcpy(b3.bookAuthor, "Naval Ravikant");
+
+  cout << b3.bookTitle << endl;
+  // printf("%d\n", b3.bookPrice);
+  printf("%f\n", b3.bookPrice);
+  printf("%d\n", b3.bookID);
   return 0;
 }
