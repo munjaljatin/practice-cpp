@@ -2,6 +2,9 @@
 #include <stdio.h>
 #include <string.h>
 
+// function Declaration
+struct Book input(void);
+
 using namespace std;
 
 // Structure in C/C++
@@ -44,5 +47,28 @@ int main(int argc, char const *argv[]) {
   // printf("%d\n", b3.bookPrice);
   printf("%f\n", b3.bookPrice);
   printf("%d\n", b3.bookID);
+
+  Book newBook;
+  newBook = input();
+  cout << newBook.bookID << " " << newBook.bookTitle << " " << newBook.bookPrice
+       << " " << newBook.bookPublisher << " " << newBook.bookAuthor;
+
+  // Pointer and Structure
+  struct Book history;
+  struct Book *ptr = NULL;
+  ptr = &history;
+  (*ptr).bookID = 100109;
+  cout << (*ptr).bookID;
   return 0;
+}
+
+Book input() {
+  Book bk;
+  printf("Enter the Book ID, Title, Price, Publisher, Author");
+  scanf("%d", &bk.bookID);
+  fgets(bk.bookTitle, 30, stdin);
+  scanf("%f", &bk.bookPrice);
+  fgets(bk.bookPublisher, 20, stdin);
+  fgets(bk.bookAuthor, 20, stdin);
+  return bk;
 }
